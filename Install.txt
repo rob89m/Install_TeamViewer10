@@ -1,8 +1,6 @@
 #Download Teamviewer 10
-$url = "http://download.teamviewer.com/download/version_10x/TeamViewer_Setup.exe"
-$output = "C:\Temp\TeamViewer_Setup.exe"
-$wc = New-Object System.Net.WebClient
-$wc.DownloadFile($url, $output)
+wget "http://download.teamviewer.com/download/version_10x/TeamViewer_Setup.exe" -UseBasicParsing -OutFile "C:\Temp\TeamViewer_Setup.exe"
+
 
 #Install Teamviewer 10
 C:\Temp\TeamViewer_Setup.exe /S
